@@ -1,0 +1,25 @@
+#titulo{
+    text-align: center;
+}
+#subtitulo{
+    text-align: left;
+}
+.parrafo{
+    text-align: justify;
+    font-style: oblique;
+}
+#tabla{
+    margin: auto;
+}
+#rojo{
+    color: red;
+}
+#amarillo{
+    color: yellow;
+}
+#azul{
+    color: blue;
+}
+#verde{
+    color: green;
+}
