@@ -1,0 +1,69 @@
+function factura(
+    numF = "0000",
+    fecha, razon, ruc, direccion) {
+
+    objFactura = {
+        numFact: numF,
+        fecha: fecha,
+        razonCliente: razon,
+        ruc: ruc,
+        direccion: direccion,
+        // detalle: {
+        //     id: 0,
+        //     descripcion: "",
+        //     cantidad: 0,
+        //     precio: 0.0,
+        //     subtotal: 0.0
+        // },
+        estado: 0,
+        listaDetalle: [],
+        subtotal: function(){
+            
+        },
+        igv: 0.0,
+        total: function(){
+
+        },
+        agregarDetalle: function (objDetalle) {
+            this.listaDetalle.push(objDetalle);
+        },
+        eliminarDetalle: function (id) {
+            this.listaDetalle.splice(id,1);
+        }
+    }
+
+    return objFactura;
+
+}
+
+var factura1 = factura("0001", "18/06/19", "Servicios S.A.", "123456", "Aqp");
+//console.log(factura1);
+var detalle1 = {
+    id: 1,
+    descripcion: "Producto 1",
+    cantidad: 10,
+    precio: 3.4,
+    subtotal: 34.00
+};
+var detalle2 = {
+    id: 1,
+    descripcion: "Producto 2",
+    cantidad: 20,
+    precio: 4.7,
+    subtotal: 141.00
+};
+var detalle3 = {
+    id: 1,
+    descripcion: "Producto 3",
+    cantidad: 20,
+    precio: 4.7,
+    subtotal: 141.00
+};
+factura1.agregarDetalle(detalle1);
+factura1.agregarDetalle(detalle2);
+factura1.agregarDetalle(detalle3);
+console.log(factura1);
+
+
+// factura1.eliminarDetalle(1);
+//  console.log(factura1);
